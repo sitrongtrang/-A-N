@@ -64,9 +64,6 @@ const WaterChart = () => {
         dataList.push(data.sum);
       }
       setWaterData({ time: timeList, data: dataList });
-      setChart(
-        
-      );
     } catch (e) {
       console.log(e);
     }

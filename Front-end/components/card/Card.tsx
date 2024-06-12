@@ -8,11 +8,8 @@ import DeviceState from "./DeviceState";
 type DeviceKind = "devices" | "sensors";
 
 const Card = ({ device, kind }: { device: any; kind: DeviceKind}) => {
-  // console.log("Rerender Cart")
-  // const [mydevice, setDevice] = useState(device)
   const [state, setState] = useState<number>(device.state);
-  // const [isChange, setIsChange] = useState(false);
-  // const [changeName, setChangeName] = useState("Device Name");
+
   useEffect(() => {
     setState(device.state)
   }, [device])
@@ -42,7 +39,6 @@ const Card = ({ device, kind }: { device: any; kind: DeviceKind}) => {
         `${be_url}/publish/topic/message`,
         sendFormat
       );
-      // console.log(changeState.data);
     } catch (e) {
       console.log(e);
     }

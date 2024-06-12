@@ -50,7 +50,6 @@ const HumidChart = () => {
   const getHumidData = async() => {
     try {
       const fetchData = await axios.get(`${be_url}/stat/humid`)
-      // console.log(fetchData.data)
       const rawData = fetchData.data
       const timeList = []
       const dataList = []
@@ -66,8 +65,6 @@ const HumidChart = () => {
   useEffect(() => {
     getHumidData()
   }, [])
-
-  // console.log(humidData)
 
   return (
     <div>

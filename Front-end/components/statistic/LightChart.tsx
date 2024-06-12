@@ -51,7 +51,6 @@ const LightChart = () => {
     const getLightData = async () => {
       try {
         const fetchData = await axios.get(`${be_url}/stat/uv`);
-        // console.log("Light", fetchData.data);
         const rawData = fetchData.data;
         const timeList = [];
         const dataList = [];

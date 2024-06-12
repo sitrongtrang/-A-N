@@ -19,7 +19,6 @@ const Devices = () => {
     console.log("Set interval in /devics");
     try {
       const getDevices = await axios.get(`${be_url}/statusDevices`);
-      // console.log("In side Devices page ", getDevices.data);
       const devices = [];
       for (let [key, value] of Object.entries(getDevices.data)) {
         if (key !== "humid" && key !== "uv" && key !== "temp") {
@@ -52,7 +51,6 @@ const Devices = () => {
     return () => clearInterval(devicesInterval);
   }, []);
 
-  // console.log(deviceList);
 
   return (
     <>

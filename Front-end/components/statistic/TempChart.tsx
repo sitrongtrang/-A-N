@@ -51,7 +51,6 @@ const TempChart = () => {
   const getTempData = async () => {
     try {
       const fetchData = await axios.get(`${be_url}/stat/temp`);
-      // console.log("Temp", fetchData.data);
       const rawData = fetchData.data;
       const timeList = [];
       const dataList = [];

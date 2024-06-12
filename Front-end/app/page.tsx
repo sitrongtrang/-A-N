@@ -69,11 +69,7 @@ export default function Dashboard() {
     let myInterval = setInterval(getStatusList, 2000)
     return () => clearInterval(myInterval)
   }, []);
-  // console.log(deviceList)
-  // setInterval(() => {
-  //   console.log("repeat after 10s")
-    
-  // }, 10000)
+  
   return (
     <>
       <h3 className="text-xl font-semibold">My Devices</h3>
