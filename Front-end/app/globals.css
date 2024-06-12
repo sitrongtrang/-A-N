@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .active-svg {
+        filter: brightness(0) saturate(100%) invert(11%) sepia(98%) saturate(7496%) hue-rotate(248deg) brightness(90%) contrast(112%)
+    }
+
+    .responsive-layout {
+        @apply px-4 py-4 md:px-6 lg:px-10
+    }
+}
