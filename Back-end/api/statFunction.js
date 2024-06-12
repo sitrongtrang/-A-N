@@ -55,7 +55,6 @@ router.get("/uv", async (req, res) => {
 });
 router.get("/waterpump/:name", async (req, res) => {
   const { name } = req.params;
-
   try {
     if (name && name == "all") {
       const result = await client1.query(
@@ -69,9 +68,10 @@ router.get("/waterpump/:name", async (req, res) => {
       res.json(result.rows);
     } else if (name && name != "none") {
       const result = await client1.query(
-        "SELECT datetime,amount,name FROM waterpump WHERE name LIKE $1 ORDER BY datetime asc ",
-        [`${name}%`]
+        "SELECT datetime,amount,name FROM waterpump WHERE uid = $1 ORDER BY datetime asc ",
+        [`${name}`]
       );
+      console.log(result.rows)
       for (let i = 0; i < result.rowCount; i++) {
         result.rows[i].datetime = moment(result.rows[i].datetime).format(
           "DD-MM-YYYY hh:mm:ss"

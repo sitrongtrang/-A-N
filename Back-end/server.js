@@ -31,7 +31,7 @@ const mqttOptions = {
 };
 const client = mqtt.connect(mqttOptions);
 client.on("connect", () => {
-  console.log("Connected to MQTT broker");
+  //console.log("Connected to MQTT broker");
   const topics = [
     "thinhdadn/feeds/V2/humidity",
     "thinhdadn/feeds/V2/temperature",
@@ -45,7 +45,7 @@ client.on("connect", () => {
     if (err) {
       console.error("Error subscribing to topics:", err);
     } else {
-      console.log("Subscribed to topics:", topics.join(", "));
+      //console.log("Subscribed to topics:", topics.join(", "));
     }
   });
 });
