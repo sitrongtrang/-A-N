@@ -139,7 +139,7 @@ client.on("message", (topic, message) => {
 });
 const utility = async (signal) => {
   try {
-    console.log("helo");
+    console.log(signal);
     const response = await axios.post(`${url}/lightControl`, {
       signal: signal,
     });
@@ -183,7 +183,7 @@ const utility3 = async (x, y, z) => {
 // Express route to publish message to MQTT broker
 app.post("/publish/topic/message", (req, res) => {
   const { topic, message } = req.body;
-  console.log("publish Api");
+  console.log(`publish Api: ${topic} with message: ${message}`);
   if (!topic || !message) {
     return res.status(400).json({ error: "Topic and message are required" });
   }

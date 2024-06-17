@@ -18,7 +18,7 @@ def getPort():
         port = ports[i]
         print(port)
         strPort = str(port)
-        if "USB" in strPort:
+        if "USB" in strPort or "usb" in strPort:
             splitPort = strPort.split(" ")
             commPort = (splitPort[0])
     print(commPort)

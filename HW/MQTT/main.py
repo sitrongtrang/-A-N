@@ -11,7 +11,7 @@ client = MQTTController("mqtt.ohstem.vn", 1883, "thinhdadn", "hehe",[],
 
 
 # start define your topics here
-feedArray = ["humidity","temperature","sun","door","light","fan"]
+feedArray = ["humidity","temperature","sun","door","lights","fan"]
 
 #assign topic to MQTTclient
 for feed in feedArray:
